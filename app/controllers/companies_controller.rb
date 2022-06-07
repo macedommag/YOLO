@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
   before_action :set_company, only: [:show]
 
   def index
@@ -6,7 +7,6 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @quotum = Quotum.new
   end
 
   private
