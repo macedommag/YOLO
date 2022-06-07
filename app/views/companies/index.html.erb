@@ -1,0 +1,8 @@
+<h1>Hello! It's Index page.</h1>
+
+<% @companies.each do |company|%>
+
+  <h6><%= company.name %></h6>
+  <%= link_to "Details", company_path(company) %>
+
+<% end %>
