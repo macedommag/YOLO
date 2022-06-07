@@ -1,1 +1,13 @@
 <h1>Hello! It's Show page.</h1>
+
+ <p><strong> Name: </strong><%= @company.name %></p>
+ <p><strong> Address: </strong><%= @company.address %></p>
+ <p><strong> Equety: </strong><%= @company.equety %></p>
+ <p><strong> Net Inc: </strong><%= @company.net_inc %></p>
+ <p><strong> Activity: </strong><%= @company.activity %></p>
+ <p><strong> Description: </strong><%= @company.description %></p>
+ <p><strong> Quotas: </strong><%= @company.max_quotas %></p>
+ <p><strong> Price/Token: </strong><%= @company.price_quotum %></p>
+
+ <%= link_to "Back", companies_path %>
+ <%= link_to "Investir", new_company_quota_path(@company) %>
