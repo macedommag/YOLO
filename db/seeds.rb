@@ -13,10 +13,10 @@ puts "database is clean"
 puts "Creating companies"
 10.times do
   company = Company.create!(
-    neme: Faker::Company.name,
+    name: Faker::Company.name,
     address: Faker::Address.street_address,
-    equety: 500000
-    net_inc: 100000
+    equety: 500000,
+    net_inc: 100000,
     activity: Faker::Company.type,
     description: Faker::Company.industry,
     max_quotas: 100,
