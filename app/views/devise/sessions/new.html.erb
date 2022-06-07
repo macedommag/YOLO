@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-4">
+<div class="container h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-4 form-yolo">
       <h2>Bem-vindo à Yolo.</h2>
-      <h7>Faça seu login para continuar.</h7>
+      
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -18,12 +18,10 @@
 
         
         
-        <div class="form-actions bt_signin my-4 btn btn-warning">
+        <div class="form-actions bt_signin btn btn-info w-100">
           <%= f.button :submit, "ACESSAR MINHA CONTA" %>
         </div>
       <% end %>
-
-      <h7>Ainda não é cliente? Abra sua conta.</h7>
 
       <%= render "devise/shared/links" %>
     </div>
