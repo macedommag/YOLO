@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_06_06_191042) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
-    t.string "adress"
+    t.string "address"
     t.integer "equety"
     t.integer "net_inc"
     t.string "activity"
