@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "yolo.png" %>
     <% end %>
 
@@ -14,10 +14,10 @@
             <%= link_to "Comece a Investir", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Projetos", "#", class: "nav-link" %>
+            <%= link_to "Projetos", companies_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sobre Nós", "#", class: "nav-link" %>
+            <%= link_to "Sobre Nós", "/about", class: "nav-link" %>
           </li>
           <% if user_signed_in? %>
           <li class="nav-item">
