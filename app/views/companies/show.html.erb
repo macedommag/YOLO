@@ -6,8 +6,8 @@
  <p><strong> Net Inc: </strong><%= @company.net_inc %></p>
  <p><strong> Activity: </strong><%= @company.activity %></p>
  <p><strong> Description: </strong><%= @company.description %></p>
- <p><strong> Quotas: </strong><%= @company.max_quotas %></p>
- <p><strong> Price/Token: </strong><%= @company.price_quotum %></p>
+ <p><strong> Tokens: </strong><%= @company.max_tokens %></p>
+ <p><strong> Price/Token: </strong><%= @company.price_of_token %></p>
 
  <%= link_to "Back", companies_path %>
- <%= link_to "Investir", new_company_quota_path(@company) %>
+ <%= link_to "Investir", new_company_token_path(@company) %>

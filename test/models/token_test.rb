@@ -1,6 +1,6 @@
 require "test_helper"
 
-class QuotasControllerTest < ActionDispatch::IntegrationTest
+class TokenTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
