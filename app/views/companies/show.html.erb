@@ -1,8 +1,6 @@
 <div class="container">
   <div class="row justify-content-center align-items-center h-100">
     <div class="col-4 form-yolo mt-5">
-      
-
       <p><strong> Name: </strong><%= @company.name %></p>
       <p><strong> Address: </strong><%= @company.address %></p>
       <p><strong> Equety: </strong><%= @company.equety %></p>
@@ -11,9 +9,9 @@
       <p><strong> Description: </strong><%= @company.description %></p>
       <p><strong> Tokens: </strong><%= @company.max_tokens %></p>
       <p><strong> Price/Token: </strong><%= @company.price_of_token %></p>
-
-      <%= link_to "Back", companies_path %>
-      <%= link_to "Investir", new_company_token_path(@company) %>
+      <p><%= link_to "Back", companies_path %></p>
+      <p><%= link_to "Investir", new_company_token_path(@company) %></p>
     </div>
   </div>
 </div>
+
