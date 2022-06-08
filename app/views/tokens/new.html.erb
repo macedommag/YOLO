@@ -1,9 +1,14 @@
-<h1>It's a page of tokens new!</h1>
-
-<p><strong> Name: </strong><%=@company.name%></p>
-<p><strong> Número de Cotas: </strong><%=@company.max_tokens%></p>
-<p><strong> Cotas vendidas: </strong><%=@company.sold_tokens%></p>
-<p><strong> Preço por cotas: </strong><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
+<div class="container">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-4 form-yolo mt-5">
+      <h1>It's a page of tokens new!</h1>           
+      <p><strong> Name: </strong><%=@company.name%></p>
+      <p><strong> Número de Cotas: </strong><%=@company.max_tokens%></p>
+      <p><strong> Cotas vendidas: </strong><%=@company.sold_tokens%></p>
+      <p><strong> Preço por cotas: </strong><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
+    </div>
+  </div>
+</div>
 
 <%= simple_form_for [@company, @token] do |f| %>
   <%= f.input :purchased_tokens, placeholder: 'Amount of tokens' %>
