@@ -12,8 +12,8 @@
       <p><strong> Tokens: </strong><%= @company.max_tokens %></p>
       <p><strong> Price/Token: </strong><%= @company.price_of_token %></p>
 
-      <%= link_to "Back", companies_path %>
-      <%= link_to "Investir", new_company_token_path(@company) %>
+      <p><%= link_to "Back", companies_path %></p>
+      <p><%= link_to "Investir", new_company_token_path(@company) %></p>
     </div>
   </div>
 </div>
