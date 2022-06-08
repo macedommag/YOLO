@@ -1,0 +1,37 @@
+body{
+  font-family: Graphik;
+}
+
+h4{
+  font-family: Graphik;
+}
+
+h2, h5{
+  font-family: Graphik;;
+}
+
+.home-info{
+  display: flex;
+  //max-height: 200px;
+  //max-width: 100%;
+  height:auto;
+
+
+
+}
+
+.home-image{
+  width: 40%;
+  height: 30%;
+
+
+}
+
+.home-text{
+  padding: 12px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //align-content-center d-flex flex-wrap justify-content-center
+}

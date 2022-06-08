@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def wallet
+    @companies = current_user.tokens.map { |token| token.company }.uniq
+  end
 end

@@ -1,19 +1,17 @@
 
 <div class="container">
-  <h1>Projects</h1>
-  <div class="row">
-    <div class="col">
-      <% @companies.each do |company|%>
-      <div class="card" style="width: 18rem;">
-        <img src="images/yolo.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title"><%= company.name %></h4>
-          <p class="card-text"><%= company.description %></p>
-          <%= link_to "Details", company_path(company) %>
+  <div class="row justify-content-between">
+    <% @companies.each do |company|%>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card m-4" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= company.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
+            <p class="card-text"><%=company.description%></p>
+            <%= link_to "Details", company_path(company) %>
+          </div>
         </div>
       </div>
-      <% end %>
-    </div>
-    
+    <% end %>
   </div>
 </div>

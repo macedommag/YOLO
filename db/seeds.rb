@@ -19,10 +19,11 @@ puts "Creating companies"
     net_inc: 100000,
     activity: Faker::Company.type,
     description: Faker::Company.industry,
-    max_quotas: 100,
-    price_quotum: rand(1..5)
+    max_tokens: 100,
+    sold_tokens: 0,
+    price_of_token: rand(1..5)
   )
-  puts "company #{company.id} is created!"
+  puts "company with id:#{company.id} is created!"
 end
 
 puts "Done!"
