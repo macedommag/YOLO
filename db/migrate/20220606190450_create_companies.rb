@@ -7,8 +7,9 @@ class CreateCompanies < ActiveRecord::Migration[6.1]
       t.integer :net_inc
       t.string :activity
       t.text :description
-      t.integer :max_quotas
-      t.integer :price_quotum
+      t.integer :max_tokens
+      t.integer :sold_tokens
+      t.integer :price_of_token
       t.string :image_url
 
       t.timestamps
