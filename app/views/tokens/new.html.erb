@@ -2,6 +2,10 @@
 
 <p><strong> Name: </strong><%=@company.name%></p>
 <p><strong> Número de Cotas: </strong><%=@company.max_tokens%></p>
-<p><strong> Preço por cotas: </strong><%=@company.price_of_token%></p>
+<p><strong> Cotas vendidas: </strong><%=@company.sold_tokens%></p>
+<p><strong> Preço por cotas: </strong><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
 
-<%#=link_to "Buy", token_path(@token) %>
+<%= simple_form_for [@company, @token] do |f| %>
+  <%= f.input :purchased_tokens, placeholder: 'Amount of tokens' %>
+  <%= f.submit "Invest", class: 'btn btn-flat' %>
+<% end %>
