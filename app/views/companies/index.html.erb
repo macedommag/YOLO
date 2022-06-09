@@ -1,9 +1,23 @@
-
 <div class="container">
-  <div class="row justify-content-between">
+  <div style="width: 400px;", class="mx-auto my-5">
+    <%= form_tag companies_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a company"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+
+  <div class="row justify-content-center">
+  
     <% @companies.each do |company|%>
+      
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card m-4" style="width: 18rem;">
+      
+        <div class="card mx-auto my-3" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title"><%= company.name %></h5>
             <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
