@@ -13,5 +13,11 @@
       <p><%= link_to "Investir", new_company_token_path(@company) %></p>
     </div>
   </div>
+  <div class="row justify-content-center align-items-center h-100">
+    <div style="width: 80%; height: 300px;", class="col-12 mt-4 map-container"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+  </div>
 </div>
-
