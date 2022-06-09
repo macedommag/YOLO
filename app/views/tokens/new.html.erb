@@ -8,9 +8,8 @@
       <p><strong> Preço por cotas: </strong><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
       <%= simple_form_for [@company, @token] do |f| %>
         <%= f.input :purchased_tokens, placeholder: 'Amount of tokens' %>
-        <%= f.submit "Invest", class: 'btn btn-flat' %>
+        <%= f.submit "Invest", class: 'btn btn-flat'%>
       <% end %>
     </div>
   </div>
 </div>
-

@@ -8,7 +8,7 @@ class CompaniesController < ApplicationController
 
   def show
   end
-
+  
   private
 
   def set_company
