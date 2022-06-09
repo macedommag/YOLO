@@ -9,8 +9,12 @@
       <p><strong> Description: </strong><%= @company.description %></p>
       <p><strong> Tokens: </strong><%= @company.max_tokens %></p>
       <p><strong> Price/Token: </strong><%= @company.price_of_token %></p>
-      <p><%= link_to "Back", companies_path %></p>
-      <p><%= link_to "Investir", new_company_token_path(@company) %></p>
+      <div class="d-grid gap-2 d-md-flex justify-content">
+        <p><%= link_to "Investir", new_company_token_path(@company, ),class:"btn btn-sm" %></p>
+        <p><%= link_to "Back", companies_path, class:"btn btn-sm" %></p>
+      </div>
+    </div>
+    <div>
     </div>
     <div class="col-4 mt-5">
       <div class="rating_card">
