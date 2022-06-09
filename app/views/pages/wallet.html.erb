@@ -3,11 +3,11 @@
 <div class="container">
   <div class="row justify-content-between">
     <% @companies.each do |company| %>
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 FaseImg">
         <div class="card m-4" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title"><%=company.name%></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%=company.tokens.sum(:purchased_tokens)%></h6>
+            <h6 class="card-subtitle mb-2 text-muted">Token:<%=company.tokens.sum(:purchased_tokens)%></h6>
             <%=link_to "invest more", company_path(company)%>
           </div>
         </div>
