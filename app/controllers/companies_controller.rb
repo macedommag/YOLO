@@ -12,6 +12,12 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @markers = [{lat: @company.latitude, lng: @company.longitude,
+                 info_window: render_to_string(partial: "info_window",
+                 locals: { company: @company }),
+                 image_url: helpers.asset_url("yologps.png")
+                }
+               ]
   end
 
   private

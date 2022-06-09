@@ -2,3 +2,13 @@
   height: 11vw;
   object-fit: cover;
 }
+
+.rating_card {
+  width: 250px;
+  height: 100px;
+  margin-bottom: 10px;
+
+  p {
+    font-size: 12px;
+  }
+}

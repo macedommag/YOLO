@@ -34,8 +34,20 @@ gem 'devise'
 # Faker DB
 gem 'faker'
 
+
 # Search
 gem 'pg_search', '~> 2.3.0'
+
+# Geocode
+gem "geocoder"
+
+# chartkick
+gem 'chartkick'
+gem 'groupdate'
+
+#Rails Admin
+gem 'rails_admin', '~> 2.0'
+
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
