@@ -14,7 +14,7 @@ puts "Creating companies"
 10.times do
   company = Company.create!(
     name: Faker::Company.name,
-    address: Faker::Address.street_address,
+    address: ["Avenida Paulista, 1000"].sample,
     equety: 500000,
     net_inc: 100000,
     activity: Faker::Company.type,

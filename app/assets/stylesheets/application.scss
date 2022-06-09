@@ -12,6 +12,8 @@
 @import "components/index";
 @import "pages/index";
 
+//Geocode
+@import "mapbox-gl/dist/mapbox-gl";
 
 a {
   text-decoration: none;
