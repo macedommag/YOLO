@@ -1,14 +1,21 @@
 .banner {
-  background-size: center;
+  background-size: cover;
   background-position: center center;
   padding: 160px ;
   width: 100%;
-  height: 200px;
+  height: 700px;
   overflow: hidden;
-
+  font-family: Graphik;
   background-repeat: no-repeat;
   object-fit: contain;
+
+  //margin-top: 73px;
+  //width: 100%;
+  //height: 425px;
+  //background-size: cover;
+  //background-position: center;
 }
+
 
 .banner h1 {
   margin: 0;
@@ -16,6 +23,8 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  font-family: Graphik;
+
 }
 
 .banner p {
@@ -23,4 +32,16 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner_about {
+  background-size: cover;
+  background-position: center center;
+  padding: 160px ;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  font-family: Graphik;
+  background-repeat: no-repeat;
+  object-fit: contain;
 }
