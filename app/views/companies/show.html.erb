@@ -16,5 +16,25 @@
     </div>
     <div>
     </div>
+    <div class="col-4 mt-5">
+      <div class="rating_card">
+        <p><strong>AVALIAÇÃO DOS FUNCIONÃRIOS</strong></p>
+        <%=image_tag "glassdoor.jpg", class: "rounded-circle", style: "width: 22px"%>
+        <span>Glassdoor.</span>
+      </div>
+      <div class="rating_card">
+        <p><strong>REPUTAÇÃO DA EMPRESA</strong></p>
+        <%=image_tag "reclame_aqui.jpg", class: "rounded-circle", style: "width: 25px"%>
+        <span>Reclame aqui.</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="row justify-content-center align-items-center h-100">
+      <div style="width: 80%; height: 300px;", class="col-12 mt-4 map-container"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
   </div>
 </div>

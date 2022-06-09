@@ -3,10 +3,21 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show]
 
   def index
-    @companies = Company.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR activity ILIKE :query"
+      @companies = Company.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @companies = Company.all
+    end
   end
 
   def show
+    @markers = [{lat: @company.latitude, lng: @company.longitude,
+                 info_window: render_to_string(partial: "info_window",
+                 locals: { company: @company }),
+                 image_url: helpers.asset_url("yologps.png")
+                }
+               ]
   end
   
   private
