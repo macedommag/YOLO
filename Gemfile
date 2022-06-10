@@ -47,6 +47,9 @@ gem 'groupdate'
 #Rails Admin
 gem 'rails_admin', '~> 2.0'
 
+#Blzers
+gem 'blazer'
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form', github: 'heartcombo/simple_form'

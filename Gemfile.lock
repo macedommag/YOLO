@@ -78,6 +78,11 @@ GEM
       execjs (< 2.8.0)
     bcrypt (3.1.18)
     bindex (0.8.1)
+    blazer (2.6.4)
+      activerecord (>= 5)
+      chartkick (>= 3.2)
+      railties (>= 5)
+      safely_block (>= 0.1.1)
     bootsnap (1.12.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -106,6 +111,7 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    errbase (0.2.2)
     erubi (1.10.0)
     execjs (2.7.0)
     faker (2.21.0)
@@ -241,6 +247,8 @@ GEM
       railties (>= 5.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    safely_block (0.3.0)
+      errbase (>= 0.1.1)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -303,6 +311,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
+  blazer
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
