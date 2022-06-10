@@ -1,16 +1,11 @@
-<h1>INSIRA O NÚMERO DA SUA CARTEIRA DIGITAL</h1>
-
 <div class="container">
   <div class="row justify-content-center align-items-center h-100">
-    <div class="col-4 form-yolo mt-5">
-      <h1>It's page show of tokens!</h1>
-
-
-      <h1>Parabéns pela aquisição!</h1>
-      
-      <%=current_user.name %>
-      
-      <%= link_to "Back Home", companies_path %>
+    <div class="col-4 card-show-token mt-5">
+      <h1>Investimento realizado com sucesso!</h1>
+      <%=@token.user.name%>
+      <%#= link_to "Back Home", companies_path %>
+      <%=image_tag "le_sneakers.jpg"%>
+      <%= link_to "My Wallet", wallet_path, class: "btn btn-show-token mt-4"%>
     </div>
   </div>
 </div>
