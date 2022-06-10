@@ -1,5 +1,18 @@
 .form-yolo{
   background-color: #fff;
   padding: 40px;
-  
+
+}
+
+.form-index {
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .form-control {
+    display:inline-block;
+    width: 70%;
+
+  }
 }
