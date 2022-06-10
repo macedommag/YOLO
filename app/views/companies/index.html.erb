@@ -1,15 +1,17 @@
-<div class="container">
+<div class="container" data-controller="company-card">
   <div style="width: 400px;", class="mx-auto my-5">
-    <%= form_tag companies_path, method: :get do %>
+    <%= form_tag companies_path, method: :get, html: { class:
+      'mb-4'  }, data: { company_card_target: 'form' } do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find a company"
+        placeholder: "Find a company",
+        data: { company_card_target: 'input',
+        action: 'keyup->company-card#update'}
       %>
       <%= submit_tag "Search", class: "btn btn-sm" %>
     <% end %>
   </div>
-
 
   <div class="row justify-content-center">
 

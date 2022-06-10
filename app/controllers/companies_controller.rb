@@ -4,10 +4,15 @@ class CompaniesController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = "name ILIKE :query OR activity ILIKE :query"
+      sql_query = "name ILIKE :query OR activity ILIKE :query OR address ILIKE :query"
       @companies = Company.where(sql_query, query: "%#{params[:query]}%")
     else
       @companies = Company.all
+    end
+
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'companies/cards', locals: { companies: @companies }, formats: [:html] }
     end
   end
 
@@ -15,7 +20,7 @@ class CompaniesController < ApplicationController
     @markers = [{lat: @company.latitude, lng: @company.longitude,
                  info_window: render_to_string(partial: "info_window",
                  locals: { company: @company }),
-                 image_url: helpers.asset_url("yologps.png")
+                 image_url: helpers.asset_url("gps.jpg")
                 }
                ]
   end

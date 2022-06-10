@@ -25,5 +25,15 @@ puts "Creating companies"
   )
   puts "company with id:#{company.id} is created!"
 end
-
+company = Company.create!(
+  name: Faker::Company.name,
+  address: ["Rua Olimpiadas, 23"],
+  equety: 500000,
+  net_inc: 100000,
+  activity: Faker::Company.type,
+  description: Faker::Company.industry,
+  max_tokens: 100,
+  sold_tokens: 0,
+  price_of_token: rand(1..5)
+)
 puts "Done!"
