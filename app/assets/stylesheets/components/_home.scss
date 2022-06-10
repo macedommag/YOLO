@@ -6,8 +6,9 @@ h4{
   font-family: Graphik;
 }
 
-h2, h5{
-  font-family: Graphik;;
+h1,h2, h5{
+  font-family: Graphik;
+  color: black;
 }
 
 .home-info{
@@ -36,4 +37,6 @@ h2, h5{
   //align-content-center d-flex flex-wrap justify-content-center
 }
 
-
+p{
+  font-size: 14px;
+}

@@ -2,9 +2,19 @@
 .btn {
 	background-color: #f4e237;
 	border-color: none;
-  border-radius: 12px
+  border-radius: 12px;
+  white-space: normal;
+
 }
 
 .btn:hover{
   background-color: #d2c747;
 }
+
+.btn-pequeno {
+  width: 20%;
+}
+
+//.btn-medio {
+  //width: 50%;
+//}

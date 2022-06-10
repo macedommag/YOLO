@@ -2,7 +2,7 @@
   <div class="row justify-content-center align-items-center h-100">
     <div class="col-4 form-yolo mt-5">
       <h2>Bem-vindo à Yolo.</h2>
-      
+
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
@@ -25,8 +25,8 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-        <div class="form-actions btn btn-info w-100">
-          <%= f.button :submit, "CRIAR MINHA CONTA" %>
+        <div class="form-actions">
+          <%= f.button :submit, "Criar Minha Conta", class: "btn btn-sm"%>
         </div>
       <% end %>
 

@@ -6,13 +6,13 @@
         class: "form-control",
         placeholder: "Find a company"
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= submit_tag "Search", class: "btn btn-sm" %>
     <% end %>
   </div>
 
 
   <div class="row justify-content-center">
-  
+
     <% @companies.each do |company|%>
 
         <div class="col-12 col-md-6 col-lg-4 card-group">
