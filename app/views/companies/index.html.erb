@@ -14,7 +14,6 @@
   <div class="row justify-content-center">
 
     <% @companies.each do |company|%>
-
         <div class="col-12 col-md-6 col-lg-4 card-group">
           <div class="card m-4" style="width: 18rem;">
             <div class="card-body">
@@ -25,9 +24,7 @@
               <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
               <p class="card-text"><%=company.description%></p>
               <%= link_to "Details", company_path(company), class:"btn btn btn-sm" %>
-
             </div>
-
           </div>
         </div>
     <% end %>
