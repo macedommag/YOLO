@@ -9,11 +9,29 @@
         data: { company_card_target: 'input',
         action: 'keyup->company-card#update'}
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= submit_tag "Search", class: "btn btn-sm" %>
     <% end %>
   </div>
 
-  <div class="row justify-content-center" data-company-card-target="cards">
-    <%= render "cards", companies: @companies %>
+  <div class="row justify-content-center">
+
+    <% @companies.each do |company|%>
+
+        <div class="col-12 col-md-6 col-lg-4 card-group">
+          <div class="card m-4" style="width: 18rem;">
+            <div class="card-body">
+              <div>
+              <%= image_tag "binance.png", class:"card-img-top img-responsive"%>
+              </div>
+              <h5 class="card-title"><%= company.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
+              <p class="card-text"><%=company.description%></p>
+              <%= link_to "Details", company_path(company), class:"btn btn btn-sm" %>
+
+            </div>
+
+          </div>
+        </div>
+    <% end %>
   </div>
 </div>
