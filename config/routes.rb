@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   resources :companies do
     resources :tokens, only: %i[new create]
   end
-  resources :tokens, only: %i[show]
+  resources :tokens, only: %i[show] do
+    resources :user_tokens, only: %i[new create]
+  end
 end

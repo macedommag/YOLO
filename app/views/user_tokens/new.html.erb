@@ -1,0 +1,6 @@
+<h1>Page User to sold token</h1>
+
+<%= simple_form_for @token, url: token_user_tokens_path(@token), method: :post do |f|%>
+  <%=f.input :purchased_tokens%>
+  <%=f.submit "Buy"%>
+<%end%>
