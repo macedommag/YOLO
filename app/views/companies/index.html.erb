@@ -2,14 +2,16 @@
   <div style="width: 400px;", class="mx-auto my-5">
     <%= form_tag companies_path, method: :get, html: { class:
       'mb-4'  }, data: { company_card_target: 'form' } do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a company",
-        data: { company_card_target: 'input',
-        action: 'keyup->company-card#update'}
-      %>
-      <%= submit_tag "Search", class: "btn btn-sm" %>
+      <div class="input-group">
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control rounded",
+          placeholder: "Find a company",
+          data: { company_card_target: 'input',
+          action: 'keyup->company-card#update'}
+        %>
+        <%= submit_tag "Search", class: "btn btn-outline-find" %>
+      </div>
     <% end %>
   </div>
 

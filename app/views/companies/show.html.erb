@@ -12,8 +12,12 @@
         <p><strong> Description: </strong><%= @company.description %></p>
         <p><strong> Tokens: </strong><%= @company.max_tokens %></p>
         <p><strong> Price/Token: </strong><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
-        <p><%= link_to "Back", companies_path %></p>
-        <p><%= link_to "Investir", new_company_token_path(@company) %></p>
+        <div class="row">
+          <div class="d-flex flex-row" style="gap:5px;">
+            <p><%= link_to "Voltar", companies_path, class:"btn btn btn-sm" %></p>
+            <p><%= link_to "Investir +", new_company_token_path(@company), class:"btn btn btn-sm" %></p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-4 my-3">

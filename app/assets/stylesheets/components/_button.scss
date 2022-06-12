@@ -4,6 +4,7 @@
 	border-color: none;
   border-radius: 12px;
   white-space: normal;
+  font-size: 12px;
 
 }
 
@@ -16,4 +17,16 @@
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.btn-space{
+  margin-right: 15px;
+}
+
+.btn-outline-find {
+  color: black;
+  //border-color: #0D6EFD;
+  border: 1px solid #ced4da;
+  font-size: 14px;
+  font-family: "Graphik";
 }
