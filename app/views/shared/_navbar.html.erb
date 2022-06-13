@@ -10,9 +10,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <%= link_to "Comece a Investir", "#", class: "nav-link" %>
-          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "Comece a Investir", wallet_path, class: "nav-link" %>
+            </li>
+            <% else %>
+            <%= link_to "Comece a Investir", new_user_session_path, class: "nav-link" %>
+          <% end %>
           <li class="nav-item">
             <%= link_to "Projetos", companies_path, class: "nav-link" %>
           </li>
