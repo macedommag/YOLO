@@ -12,6 +12,43 @@
   margin-top: 220px;
 }
 
+.card-buy-token-emissao-primaria{
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px 0 #404040bd;
+  background-color: white;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+.card-buy-token-mercado-secundario{
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px 0 #404040bd;
+  background-color: white;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+.card-buy-token-mercado-secundario-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  .content-1 {
+    display: inline-block;
+    padding: .375rem 0;
+  }
+}
+
 .rating-card-group {
   margin-top: 220px;
 }
@@ -51,4 +88,8 @@
 .card-container{
   align-items: center;
   margin-left: 100px;
+}
+
+.card {
+  border-radius: 8px;
 }
