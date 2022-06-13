@@ -1,22 +1,32 @@
-<h1>#MY WALLET</h1>
-
 <div class="container">
-  <h6>Total de tokens: <%=@total_tokens%></h6>
-  <h6>Total de empresas: <%=@total_company%></h6>
-  <h6>Total investido: <%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %></h6>
+  <div class="card-wallet">
+    <div class="card-wallet-content">
+      <div class="card-wallet-mark"></div>
+      <h6><%=@total_tokens%> tokens</h6>
+      <% if @total_company == 1 %>
+        <h6><%=@companies%> empresa</h6>
+        <% else %>
+        <h6><%=@companies%> empresas</h6>
+      <%end%>
+      <h6><%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %> investido</h6>
+    </div>
+  </div>
   <div class="row">
-    <% @companies.each do |company| %>
+    <% @tokens.each do |token| %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card m-4" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title"><%=company.name%></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Number of Token: <%=company.tokens.sum(:purchased_tokens)%></h6>
-            <h6 class="card-subtitle mb-2 text-muted">Total: <%=number_to_currency(company.tokens.sum(:purchased_tokens) * company.price_of_token,
+            <h5 class="card-title"><%=token.company.name%></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Quantidade de Tokens: <%=token.purchased_tokens%> un</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Preço por token: <%=number_to_currency(token.company.price_of_token,unit: "R$", separator: ",", delimiter: "")%></h6>
+            <h6 class="card-subtitle mb-2 text-muted">Total investido: <%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
                  unit: "R$", separator: ",", delimiter: "")%></h6>
-            <%=link_to "Invest more", company_path(company), class: "btn"%>
+            <h6><%=token.price%></h6>
+            <%=link_to "Investir", company_path(token.company), class: "btn"%>
+            <%=link_to "Vender", edit_token_path(token), class: "btn"%>
           </div>
         </div>
       </div>
-    <% end %>
+    <%end%>
   </div>
 </div>
