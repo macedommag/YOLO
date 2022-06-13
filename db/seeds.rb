@@ -37,3 +37,5 @@ company = Company.create!(
   price_of_token: rand(1..5)
 )
 puts "Done!"
+
+
