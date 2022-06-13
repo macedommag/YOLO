@@ -8,9 +8,9 @@ class PagesController < ApplicationController
   end
 
   def wallet
-    @companies = current_user.tokens.map { |token| token.company }.uniq
-    @total_tokens = current_user.tokens.map { |token| token.purchased_tokens }.sum
-    @total_company= current_user.tokens.map { |token| token.company }.uniq.count
-    @total_invest = current_user.tokens.map { |token| token.company.sold_tokens * token.company.price_of_token }.uniq.sum
+    @tokens = current_user.tokens.includes(:company).where.not(purchased_tokens: 0).order("companies.name")
+    @companies = current_user.tokens.includes(:company).where.not(purchased_tokens: 0).map { |token| token.company }.uniq.count
+    @total_tokens = current_user.tokens.sum(:purchased_tokens)
+    @total_invest = current_user.tokens.map { |token| token.purchased_tokens * token.company.price_of_token }.sum
   end
 end

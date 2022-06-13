@@ -4,6 +4,25 @@ class TokensController < ApplicationController
     @token = Token.find(params[:id])
   end
 
+    #pegar comprador
+    #pegar vendedor
+    #pegar numero de ação a venda
+    #numero de ação a venda - ação do vendedor
+    #numero de ação a vende + ação do comprador
+
+  def edit
+    @token = Token.find(params[:id])
+  end
+
+  def update
+    @token = Token.find(params[:id])
+    if @token.update(price_params)
+      redirect_to "/wallet"
+    else
+      render :edit
+    end
+  end
+
   def new
     @company = Company.find(params[:company_id])
     @token = Token.new
@@ -31,4 +50,7 @@ class TokensController < ApplicationController
     params.require(:token).permit( :purchased_tokens )
   end
 
+  def price_params
+    params.require(:token).permit(:price)
+  end
 end
