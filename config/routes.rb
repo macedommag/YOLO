@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :tokens, only: %i[new create]
     resources :ratings, only: :create
   end
-  resources :tokens, only: %i[show] do
+  resources :tokens, only: %i[show edit update] do
     resources :user_tokens, only: %i[new create]
   end
 end
