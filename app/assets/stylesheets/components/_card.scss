@@ -5,18 +5,27 @@
 
 .card-info-company {
   border-radius: 8px;
-  padding: 12px;
-  box-shadow: 0 4px 6px 0 #404040bd;
+  //padding: 12px;
+  //box-shadow: 0 4px 6px 0 #404040bd;
   background-color: white;
   position: relative;
-  margin-top: 220px;
+  margin-top: 0px;
+  padding: 24px;
+  display: grid;
+  grid-row-gap: 20px;
+  width: 400px;
 }
+  h1{
+    font-size: 16px;
+  }
+
+
 
 .card-buy-token-emissao-primaria{
   width: 100%;
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 4px 6px 0 #404040bd;
+  //box-shadow: 0 4px 6px 0 #404040bd;
   background-color: white;
 
   h2 {
@@ -29,7 +38,7 @@
   width: 100%;
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 4px 6px 0 #404040bd;
+  //box-shadow: 0 4px 6px 0 #404040bd;
   background-color: white;
 
   h2 {
@@ -60,20 +69,18 @@
   border-radius: 8px;
   background-color: white;
   padding: 12px;
-  box-shadow: 0 4px 6px 0 #555353cc;
+  //box-shadow: 0 4px 6px 0 #555353cc;
   text-align: center;
   color: black;
   position: relative;
 
-  p {
-    font-size: 12px;
-  }
-
   &:hover {
-    box-shadow: 0 0px 8px 0 #fdec01f3;
+    //box-shadow: 0 0px 8px 0 #fdec01f3;
   }
 }
-
+p {
+  font-size: 12px;
+}
 .rating-card-content {
   margin: 10px;
 }
@@ -83,7 +90,7 @@
   padding: 40px;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 4px 6px 0 #555353cc;
+  //box-shadow: 0 4px 6px 0 #555353cc;
 }
 .card-container{
   align-items: center;
@@ -92,4 +99,57 @@
 
 .card {
   border-radius: 8px;
+}
+
+.h1-show{
+  //font-size: 21px;
+  //ont-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.9px;
+  color: #172a41;
+  //display: -webkit-box;
+  //display: -webkit-flex;
+  //display: -ms-flexbox;
+  display: flex;
+
+}
+
+
+.h2-show{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-column-gap: 20px;
+    h2{
+      font-size: 14px;
+      }
+
+    .h2-1-show{
+      display: grid;
+      grid-row-gap: 4px;
+    }
+    .h2-2-show{
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.33;
+      letter-spacing: 0.5px;
+      color: #333333;
+
+    }
+
+    .h2-3-show{
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.33;
+      letter-spacing: 0.5px;
+      color: #627d98;
+    }
+}
+
+.img-show {
+  object-fit: contain;
+  object-position: right;
+}
+img {
+  border-style: none;
 }

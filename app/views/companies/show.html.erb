@@ -1,25 +1,82 @@
-<%=image_tag "Sensix.png", class: "banner-company-info"%>
+<!--%=image_tag "Sensix.png", class: "banner-company-info"%-->
 
 <div class="container">
   <div class="row justify-content-center align-items-center h-100">
-    <div class="col-4 my-3">
+    <div class="col-10 my-3">
       <div class="card-info-company">
-        <p><strong> Name: </strong><%= @company.name %></p>
-        <p><strong> Address: </strong><%= @company.address %></p>
-        <p><strong> Equety: </strong><%= number_to_currency(@company.equety, unit: "R$", separator: ",", delimiter: "") %></p>
-        <p><strong> Net Inc: </strong><%=number_to_currency(@company.net_inc, unit: "R$", separator: ",", delimiter: "") %></p>
-        <p><strong> Activity: </strong><%= @company.activity %></p>
-        <p><strong> Description: </strong><%= @company.description %></p>
-        <p><strong> Tokens: </strong><%= @company.max_tokens %></p>
-        <p><strong> Price/Token: </strong><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
+          <div class="h1-show">
+            <div>
+              <h1><%= @company.name %></h1>
+            <div>
+
+            <div>
+              <p><%= @company.address %></p>
+            </div>
+
+          </div>
+        <div class="h2-show">
+          <div class="h2-1-show">
+            <div class="h2-2-show">
+              <h2> Equety</h2>
+            </div>
+            <div class="h2-3-show">
+              <p><%= number_to_currency(@company.equety, unit: "R$", separator: ",", delimiter: "") %></p>
+            </div>
+          </div>
+            <div class="h2-1-show">
+              <div class="h2-2-show">
+                <h2>Net Inc</h2>
+              </div>
+              <div class="h2-3-show" >
+                <p><%=number_to_currency(@company.net_inc, unit: "R$", separator: ",", delimiter: "") %></p>
+              </div>
+            </div>
+            <div class="h2-1-show">
+              <div class="h2-2-show">
+                <h2> Activity</h2>
+              </div>
+              <div class="h2-3-show">
+                <p><%= @company.activity %></p>
+              </div>
+            </div>
+        </div>
+            <div class="h2-show">
+              <div class="h2-1-show">
+                <div class="h2-2-show">
+                  <h2>Description</h2>
+                </div>
+                <div class="h2-3-show">
+                  <p><%= @company.description %></p>
+                </div>
+              </div>
+            </div>
+          <div class="h2-show">
+            <div class="h2-1-show">
+              <div class="h2-2-show">
+                <h2> Tokens</h2>
+              </div>
+              <div class="h2-3-show">
+                <p><%= @company.max_tokens %></p>
+              </div>
+            </div>
+            <div class="h2-1-show">
+              <div class="h2-2-show">
+                <h2> Price/Token<h2>
+              </div>
+              <div class="h2-3-show">
+                <p><%= number_to_currency(@company.price_of_token, unit: "R$", separator: ",", delimiter: "") %></p>
+              </div>
+            </div>
+          </div>
         <div class="row">
           <div class="d-flex flex-row" style="gap:5px;">
-            <p><%= link_to "Voltar", companies_path, class:"btn btn btn-sm" %></p>
-            <p><%= link_to "Investir +", new_company_token_path(@company), class:"btn btn btn-sm" %></p>
+            <p><%= link_to "Voltar", companies_path, class:"btn btn-sm" %></p>
+            <p><%= link_to "Investir +", new_company_token_path(@company), class:"btn btn-sm" %></p>
           </div>
         </div>
       </div>
     </div>
+  </div>
     <div class="col-4 my-3">
       <div class="rating-card-group">
         <a href="https://www.glassdoor.com.br/" target="_blank">
