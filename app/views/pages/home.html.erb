@@ -12,7 +12,7 @@
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <p class="card-text">Investir em quem quer fazer acontecer</p>
         <a href="#" class="card-link">Saiba Mais</a>
-        <a href="#" class="card-link"></a>
+        
       </div>
     </div>
   </div>
@@ -23,18 +23,24 @@
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <p class="card-text">Seja sócio das empresas</p>
         <a href="#" class="card-link">Saiba Mais</a>
-        <a href="#" class="card-link"></a>
+        
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
+        
         <h5 class="card-title">Negocie seu Token</h5>
+
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <p class="card-text">Venda seus ativos para quem quiser</p>
-        <a href="#" class="card-link">Saiba Mais</a>
-        <a href="#" class="card-link"></a>
+        <% if user_signed_in? %>
+            <%= link_to 'Saiba Mais', wallet_path %>
+          <% else %>
+            <%= link_to 'Saiba Mais', new_user_session_path %>
+          <% end %>
+        
       </div>
     </div>
   </div>
