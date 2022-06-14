@@ -4,7 +4,7 @@
       <%= link_to company_path(company) do %>
         <div class="card-body">
           <div>
-          <%= image_tag "binance.png", class:"card-img-top img-responsive"%>
+          <%= image_tag company.image_url, class:"card-img-top img-responsive"%>
           </div>
           <div class="mt-4">
             <h5 class="card-title"><%= company.name %></h5>
