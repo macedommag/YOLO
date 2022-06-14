@@ -47,6 +47,24 @@
   }
 }
 
+.card-sell-token-mercado-secundario{
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px 0 #404040bd;
+  background-color: white;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
 .card-buy-token-mercado-secundario-content {
   display: flex;
   justify-content: space-between;
@@ -116,6 +134,27 @@ p {
 }
 
 
+.card-wallet-content {
+  position: relative;
+  border-radius: 12px;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 1px 7px 0 #555353cc;
+
+  .card-wallet-mark {
+    position: absolute;
+    top: -5px;
+    left: 26px;
+    width: 60px;
+    height: 10px;
+    background-color:  #fdec01f3;
+    border-radius: 2px;
+  }
+
+
 .h2-show{
     display: grid;
     grid-auto-flow: column;
@@ -154,4 +193,24 @@ p {
 img {
   border-style: none;
 
+}
+
+.card-body {
+  box-shadow: 0 1px 8px 0 #555353cc;
+  border-radius: 6px;
+
+  .card-text {
+    text-decoration: none;
+    color: black;
+  }
+
+  &:hover  {
+    color: black
+  }
+}
+
+.card-body {
+  &:hover {
+    box-shadow: 0 0px 8px 0 #fdec01f3;
+  }
 }

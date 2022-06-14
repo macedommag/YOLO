@@ -4,12 +4,6 @@ class TokensController < ApplicationController
     @token = Token.find(params[:id])
   end
 
-    #pegar comprador
-    #pegar vendedor
-    #pegar numero de ação a venda
-    #numero de ação a venda - ação do vendedor
-    #numero de ação a vende + ação do comprador
-
   def edit
     @token = Token.find(params[:id])
   end

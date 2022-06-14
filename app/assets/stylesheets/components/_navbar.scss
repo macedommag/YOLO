@@ -9,7 +9,8 @@
   font-weight: 500;
   text-align: center;
   display: flex;
-  box-shadow: 0 0px 10px 0 #404040bd;
+  //box-shadow: 0 0px 10px 0 #404040bd;
+  position: relative;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,5 +21,5 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  //width: 40px;
 }
