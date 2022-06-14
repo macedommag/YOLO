@@ -1,18 +1,18 @@
 <% companies.each do |company|%>
-
-  <div class="col-12 col-md-6 col-lg-4 card-group">
+  <div class="col-md-6 col-lg-4 card-group">
     <div class="card m-4" style="width: 18rem;">
-      <div class="card-body">
-        <div>
-        <%= image_tag "binance.png", class:"card-img-top img-responsive"%>
+      <%= link_to company_path(company) do %>
+        <div class="card-body">
+          <div>
+          <%= image_tag "binance.png", class:"card-img-top img-responsive"%>
+          </div>
+          <div class="mt-4">
+            <h5 class="card-title"><%= company.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
+            <p class="card-text"><%=company.description%></p>
+          </div>
         </div>
-        <h5 class="card-title"><%= company.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
-        <p class="card-text"><%=company.description%></p>
-        <%= link_to "Detalhes", company_path(company), class:"btn btn btn-sm" %>
-
-      </div>
-
+      <% end %>
     </div>
   </div>
 <% end %>
