@@ -195,7 +195,7 @@ img {
   border-style: none;
 
 }
-  
+
 .star-show{
     grid-column: 2/span 6;
     padding: 28px;
@@ -248,7 +248,72 @@ img {
 
 }
 
-.search-col-index {
-height: 100%;
+.card-body {
+  box-shadow: 0 1px 8px 0 #555353cc;
+  border-radius: 6px;
+
+  .card-text {
+    text-decoration: none;
+    color: black;
+  }
+
+  &:hover {
+    color: black
+  }
 }
 
+.card-body {
+  &:hover {
+    box-shadow: 0 0px 8px 0 #fdec01f3;
+  }
+}
+
+.sector {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #627d9812;
+
+  p{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0px 8px 0 #fdec01f3;
+  }
+}
+
+.sector:hover {
+  .eua {
+    color: blue;
+  }
+}
+
+.sector:hover {
+  .gam {
+    color: rgb(143, 143, 151);
+  }
+}
+
+.sector:hover {
+  .fin {
+    color: rgba(13, 141, 41, 0.637);
+  }
+}
+
+.sector:hover {
+  .com {
+    color: red;
+  }
+}
+
+.sector:hover {
+  .agro {
+    color: rgb(42, 133, 39);
+  }
+}
