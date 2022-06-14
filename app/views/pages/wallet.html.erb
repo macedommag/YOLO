@@ -21,7 +21,9 @@
             <h6 class="card-subtitle mb-2 text-muted">Preço por token: <%=number_to_currency(token.company.price_of_token,unit: "R$", separator: ",", delimiter: "")%></h6>
             <h6 class="card-subtitle mb-2 text-muted">Total investido: <%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
                  unit: "R$", separator: ",", delimiter: "")%></h6>
-            <h6><%=token.price%></h6>
+            <% unless token.price.nil? %>
+              <h6 class="card-subtitle mb-2 text-muted">Preço token venda: <%=number_to_currency(token.price,unit: "R$", separator: ",", delimiter: "")%></h6>
+            <%end%>
             <%=link_to "Investir", company_path(token.company), class: "btn"%>
             <%=link_to "Vender", edit_token_path(token), class: "btn"%>
           </div>

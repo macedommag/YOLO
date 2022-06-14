@@ -15,6 +15,9 @@
 //Geocode
 @import "mapbox-gl/dist/mapbox-gl";
 
+//Pages
+@import "pages/companies";
+
 a {
   text-decoration: none;
   color: #d2c747;
@@ -30,5 +33,3 @@ a:hover{
 .form-inputs{
   font-size: 14px;
 }
-
-
