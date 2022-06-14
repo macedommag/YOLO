@@ -154,7 +154,7 @@ p {
     border-radius: 2px;
   }
 
-
+}
 .h2-show{
     display: grid;
     grid-auto-flow: column;
@@ -190,6 +190,7 @@ p {
   object-fit: contain;
   object-position: right;
 }
+
 img {
   border-style: none;
 
@@ -244,4 +245,10 @@ img {
     margin-inline-end: 0px;
     //font-weight: bold;
   }
+
+}
+
+.search-col-index {
+height: 100%;
+}
 
