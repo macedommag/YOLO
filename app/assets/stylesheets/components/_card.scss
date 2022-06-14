@@ -154,7 +154,7 @@ p {
     border-radius: 2px;
   }
 
-
+}
 .h2-show{
     display: grid;
     grid-auto-flow: column;
@@ -190,6 +190,7 @@ p {
   object-fit: contain;
   object-position: right;
 }
+
 img {
   border-style: none;
 
@@ -213,4 +214,8 @@ img {
   &:hover {
     box-shadow: 0 0px 8px 0 #fdec01f3;
   }
+}
+
+.search-col-index {
+height: 100%;
 }
