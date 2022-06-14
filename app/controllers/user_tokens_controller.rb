@@ -13,11 +13,11 @@ class UserTokensController < ApplicationController
     if new_token.save
       @token.purchased_tokens -= new_token.quantity_purchased
       @token.peer_to_peer = true
-      @token.quantity_purchased = 0 #zero porque está vendendo e não comprado
+      @token.quantity_purchased = 0 #zero porque está vendendo e não comprando
       @token.save!
       redirect_to token_path(new_token)
     else
-      @token = new_token
+      @token.purchased_tokens = new_token.purchased_tokens
       render :new
     end
   end

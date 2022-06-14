@@ -1,0 +1,6 @@
+<h1><%=@token.company.name%></h1>
+<h2><%=@token.purchased_tokens%> tokens</h2>
+<%= simple_form_for [@company, @token] do |f| %>
+  <%= f.input :price, label: "Preço por token" %>
+  <%= f.submit "Vender", class: 'btn btn-flat'%>
+<% end %>

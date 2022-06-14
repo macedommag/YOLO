@@ -23,6 +23,9 @@ class CompaniesController < ApplicationController
                  image_url: helpers.asset_url("gps.jpg")
                 }
                ]
+    @rating = Rating.find_by(company: @company, user: current_user)
+    @rating = Rating.new unless @rating
+      
   end
   
   private

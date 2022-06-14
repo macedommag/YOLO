@@ -82,7 +82,7 @@
         <a href="https://www.glassdoor.com.br/" target="_blank">
           <div class="rating-card">
             <div class="rating-card-content">
-              <p><strong>AVALIAÇÃO DOS FUNCIONÃRIOS</strong></p>
+              <p><strong>AVALIAÇÃO DOS FUNCIONÁRIOS</strong></p>
               <%=image_tag "glassdoor.jpg", class: "rounded-circle", style: "width: 22px"%>
               <span>Glassdoor<span>
             </div>
@@ -97,6 +97,21 @@
             </div>
           </div>
         </a>
+        <div class="rating-card">
+            <div class="rating-card-content">
+              <p><strong>NOTA DA COMPANY</strong></p>
+              <% if @rating.persisted? %>
+                Sua nota é: <%= '⭐' * @rating.stars %>
+              <% else %>
+                <%= simple_form_for [@company, @rating] do |f|%>
+                  <%= f.input :stars, collection: (0..5) %>
+                  <%= f.submit %>
+                <% end %>
+              <% end %>
+                
+                
+            </div>
+          </div>
       </div>
     </div>
   </div>
