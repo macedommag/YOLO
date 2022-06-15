@@ -2,10 +2,8 @@
   <div class="container pading">
     <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
     <p><span data-controller="typed-js"></span></p>
-    <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
-
 <div class="card-container row d-inline-flex mt-4 justify-content-center">
   <div class="col">
     <div class="card" style="width: 18rem;">
@@ -13,8 +11,11 @@
         <h5 class="card-title">Pequenas Empresas</h5>
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <p class="card-text">Investir em quem quer fazer acontecer</p>
-        <a href="#" class="card-link">Saiba Mais</a>
-        <a href="#" class="card-link"></a>
+        <% if user_signed_in? %>
+            <%= link_to 'Saiba Mais', companies_path %>
+          <% else %>
+            <%= link_to 'Saiba Mais', new_user_session_path %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -24,8 +25,11 @@
         <h5 class="card-title">Você Empreendedor</h5>
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <p class="card-text">Seja sócio das empresas</p>
-        <a href="#" class="card-link">Saiba Mais</a>
-        <a href="#" class="card-link"></a>
+        <% if user_signed_in? %>
+            <%= link_to 'Saiba Mais', companies_path %>
+          <% else %>
+            <%= link_to 'Saiba Mais', new_user_session_path %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -35,8 +39,11 @@
         <h5 class="card-title">Negocie seu Token</h5>
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <p class="card-text">Venda seus ativos para quem quiser</p>
-        <a href="#" class="card-link">Saiba Mais</a>
-        <a href="#" class="card-link"></a>
+        <% if user_signed_in? %>
+            <%= link_to 'Saiba Mais', wallet_path %>
+          <% else %>
+            <%= link_to 'Saiba Mais', new_user_session_path %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -81,7 +88,11 @@
   <div class="home-text mx-5 col-6">
         <h4>Viva Melhor</h4>
         <p>Invista seu dinheiro de forma tranquila. E aproveite melhor seu tempo.</p>
-        <a href="#" class="btn btn btn-sm">saiba mais</a>
+        <% if user_signed_in? %>
+            <%= link_to 'Saiba Mais', companies_path %>
+          <% else %>
+            <%= link_to 'Saiba Mais', new_user_session_path %>
+        <% end %>
   </div>
   <div class="home-image col-6">
     <%= image_tag "yolo_1 copy.png", class: 'img-fluid w-100' %>

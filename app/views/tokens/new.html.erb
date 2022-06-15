@@ -20,7 +20,7 @@
           <% @company.tokens.each do |token|%>
             <div class="card-buy-token-mercado-secundario-content">
               <div class="content-1">
-                <% if token.price && token.user != current_user%>
+                <% if token.price && token.user != current_user && token.purchased_tokens.positive? %>
                   <p><strong>Quantidade:</strong> <%=token.purchased_tokens%> tokens</p>
                   <p><strong>Preço por token:</strong> <%=number_to_currency(token.price, unit: "R$", separator: ",", delimiter: "")%></p>
                     <div class="content-2">

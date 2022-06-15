@@ -16,9 +16,44 @@
           </div>
         <% end %>
       </div>
-
-      <div class="row justify-content-center" data-company-card-target="cards">
-        <%= render "cards", companies: @companies %>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mt-4">
+          <div class="card mb-2">
+            <div class="sector">
+              <p>Agronegócio</p>
+              <div class="agro"><i class="fas fa-tractor"></i></div>
+            </div>
+          </div>
+          <div class="card mb-2">
+            <div class="sector">
+              <p>Comécio</p>
+              <div class="com"><i class="fas fa-store"></i></div>
+            </div>
+          </div>
+          <div class="card mb-2">
+            <div class="sector">
+              <p>Financeiro</p>
+              <div class="fin"><i class="fas fa-donate"></i></div>
+            </div>
+          </div>
+          <div class="card mb-2">
+            <div class="sector">
+              <p>Games</p>
+              <div class="gam"><i class="fas fa-gamepad"></i></div>
+            </div>
+          </div>
+          <div class="card mb-2">
+            <div class="sector">
+              <p>Americanas</p>
+              <div class="eua"><i class="fas fa-flag-usa"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-9">
+          <div class="row justify-content-center" data-company-card-target="cards">
+            <%= render "cards", companies: @companies %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

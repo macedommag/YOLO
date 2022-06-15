@@ -8,7 +8,7 @@
         <% else %>
         <h6><%=@companies%> empresas</h6>
       <%end%>
-      <h6><%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %> investido</h6>
+      <h6>Valor total dos Tokens: <%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %></h6>
     </div>
   </div>
   <div class="row">
@@ -19,7 +19,7 @@
             <h5 class="card-title"><%=token.company.name%></h5>
             <h6 class="card-subtitle mb-2 text-muted">Quantidade de Tokens: <%=token.purchased_tokens%> un</h6>
             <h6 class="card-subtitle mb-2 text-muted">Preço por token: <%=number_to_currency(token.company.price_of_token,unit: "R$", separator: ",", delimiter: "")%></h6>
-            <h6 class="card-subtitle mb-2 text-muted">Total investido: <%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
+            <h6 class="card-subtitle mb-2 text-muted">Total: <%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
                  unit: "R$", separator: ",", delimiter: "")%></h6>
             <% unless token.price.nil? %>
               <h6 class="card-subtitle mb-2 text-muted">Preço token venda: <%=number_to_currency(token.price,unit: "R$", separator: ",", delimiter: "")%></h6>
