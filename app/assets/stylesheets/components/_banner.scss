@@ -44,7 +44,18 @@
   font-family: Graphik;
   background-repeat: no-repeat;
   object-fit: contain;
+
 }
+
+.banner_about h1 {
+  font-size: 10px;
+
+}
+
+.banner_about p {
+  font-size: 60px
+}
+
 
 @keyframes changeWidth {
   0% {height: 0%;}
