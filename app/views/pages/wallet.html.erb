@@ -8,20 +8,32 @@
           <div class="col-9">
             <div class="row">
               <div class="col-3 pt-3">
-                <h6>Tokens</h6>
-                <%=@total_tokens%>
+                <div class="h2-wallet">
+                  <h6>Tokens</h6>
+                </div>
+                <div class="h2-3-wallet">
+                  <%=@total_tokens%>
+                </div>
               </div>
               <div class="col-3 pt-3">
-                <h6>Número de Empresas</h6>
-                <% if @total_company == 1 %>
-                  <h6><%=@companies%> empresa</h6>
-                  <% else %>
-                  <h6><%=@companies%> empresas</h6>
-                <%end%>
+                <div class="h2-wallet">
+                  <h6>Número de Empresas</h6>
+                </div>
+                <div class="h2-3-wallet">
+                  <% if @total_company == 1 %>
+                    <h6><%=@companies%> empresa</h6>
+                    <% else %>
+                    <h6><%=@companies%> empresas</h6>
+                  <%end%>
+                </div>
               </div>
               <div class="col-6 pt-3">
-                <h6>Valor total dos Tokens</h6>
-                <%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %>
+                <div class="h2-wallet">
+                  <h6>Valor total dos Tokens</h6>
+                </div>
+                <div class="h2-3-wallet">
+                  <%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %>
+                </div>
               </div>
             </div>
           </div>
@@ -46,7 +58,8 @@
           <div class="card m-4" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><%=token.company.name%></h5>
-              <h6 class="card-subtitle mb-2 text-muted">Quantidade de Tokens: <%=token.purchased_tokens%> un</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Quantidade de Tokens</h6>
+              <p><%=token.purchased_tokens%> un</p>
               <h6 class="card-subtitle mb-2 text-muted">Preço por token: <%=number_to_currency(token.company.price_of_token,unit: "R$", separator: ",", delimiter: "")%></h6>
               <h6 class="card-subtitle mb-2 text-muted">Total: <%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
                   unit: "R$", separator: ",", delimiter: "")%></h6>
