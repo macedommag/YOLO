@@ -4,7 +4,8 @@
       <h1><strong><%=@token.user.name.capitalize%></strong> seu Investimento na empresa <strong><%=@token.company.name.capitalize%></strong>
       foi realizado com sucesso!</h1>
       <%#= link_to "Back Home", companies_path %>
-      <%=image_tag "le_sneakers.jpg"%>
+      <%=image_tag "le_sneakers_qr_code" %>
+      <%=image_tag "yolo_filme.gif", style: "width: 280px; height: 210px;" %>
       <%= link_to "My Wallet", wallet_path, class: "btn btn-show-token mt-4"%>
     </div>
   </div>
