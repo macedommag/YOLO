@@ -48,7 +48,6 @@
     </div>
   </div>
 </div>
-
 <!--div class="row d-flex justify-content-center mt-4">
   <div clas="d-flex col-sm align-content-center flex-wrap justify-content-center">
   </div>
@@ -81,17 +80,15 @@
     </div>
   </div>
 </div>
-
 </div-->
-
 <div class="home-info row mt-4">
-  <div class="home-text mx-5 col-6">
+  <div class="home-text mx-3 col-6">
     <h4>Viva Melhor</h4>
     <p>Invista seu dinheiro de forma tranquila. E aproveite melhor seu tempo.</p>
     <% if user_signed_in? %>
-      <%= link_to 'Saiba Mais', companies_path %>
+        <%= link_to 'Saiba Mais', companies_path %>
       <% else %>
-      <%= link_to 'Saiba Mais', new_user_session_path %>
+        <%= link_to 'Saiba Mais', new_user_session_path %>
     <% end %>
   </div>
   <div class="home-image col-6">

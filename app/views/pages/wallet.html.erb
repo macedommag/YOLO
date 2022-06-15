@@ -1,62 +1,115 @@
-<div class="container">
-  <div class="card-wallet">
-    <div class="card-wallet-content">
-      <div class="card-wallet-mark-1"></div>
-      <div class="card-wallet-mark-2"></div>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-9">
-          <div class="row">
-            <div class="col-3 pt-3">
-              <h6>Tokens</h6>
-              <%=@total_tokens%>
-            </div>
-            <div class="col-3 pt-3">
-              <h6>Número de Empresas</h6>
-              <% if @total_company == 1 %>
-                <h6><%=@companies%> empresa</h6>
-                <% else %>
-                <h6><%=@companies%> empresas</h6>
-              <%end%>
-            </div>
-            <div class="col-6 pt-3">
-              <h6>Valor total dos Tokens</h6>
-              <%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %>
+<div class="backgroud-index">
+  <div class="container">
+    <div class="card-wallet">
+      <div class="card-wallet-content">
+        <div class="card-wallet-mark-1"></div>
+        <div class="card-wallet-mark-2"></div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-9">
+            <div class="row">
+              <div class="col-3 pt-3">
+                <div class="h2-wallet">
+                  <h6>Tokens</h6>
+                </div>
+                <div class="h2-3-wallet">
+                  <%=@total_tokens%>
+                </div>
+              </div>
+              <div class="col-3 pt-3">
+                <div class="h2-wallet">
+                  <h6>Número de Empresas</h6>
+                </div>
+                <div class="h2-3-wallet">
+                  <% if @total_company == 1 %>
+                    <h6><%=@companies%> empresa</h6>
+                    <% else %>
+                    <h6><%=@companies%> empresas</h6>
+                  <%end%>
+                </div>
+              </div>
+              <div class="col-6 pt-3">
+                <div class="h2-wallet">
+                  <h6>Valor total dos Tokens</h6>
+                </div>
+                <div class="h2-3-wallet">
+                  <%= number_to_currency(@total_invest, unit: "R$", separator: ",", delimiter: "") %>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="dropdown">
-            <button class="btn-wallet dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Empresas
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <%@companies_wallet.each do |company|%>
-                <li><a class="dropdown-item"><%=link_to company.name, company_path(company), class: "dropdown-item"%></a></li>
-              <%end%>
-            </ul>
+          <div class="col-3">
+            <div class="dropdown">
+              <button class="btn-wallet dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Empresas
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <%@companies_wallet.each do |company|%>
+                  <li><a class="dropdown-item"><%=link_to company.name, company_path(company), class: "dropdown-item "%></a></li>
+                <%end%>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <% @tokens.each do |token| %>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card m-4" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"><%=token.company.name%></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Quantidade de Tokens: <%=token.purchased_tokens%> un</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Preço por token: <%=number_to_currency(token.company.price_of_token,unit: "R$", separator: ",", delimiter: "")%></h6>
-            <h6 class="card-subtitle mb-2 text-muted">Total: <%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
-                 unit: "R$", separator: ",", delimiter: "")%></h6>
-            <% unless token.price.nil? %>
-              <h6 class="card-subtitle mb-2 text-muted">Preço token venda: <%=number_to_currency(token.price,unit: "R$", separator: ",", delimiter: "")%></h6>
-            <%end%>
-            <%=link_to "Investir", company_path(token.company), class: "btn"%>
-            <%=link_to "Vender", edit_token_path(token), class: "btn"%>
+    <div class="">
+      <div class="row justify-content-center;">
+        <% @tokens.each do |token| %>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="card m-4" style="width: 18rem;">
+              <div class="card-body">
+                  <div class="h1-show">
+                    <h5 class="card-title"><%=token.company.name%></h5>
+                  </div>
+                  <div class="h2-show">
+                    <div class="h2-1-show">
+                      <div class="h2-2-show">
+                        <h2>Quantidade de Tokens</h2>
+                      </div>
+                      <div class="h2-3-show">
+                        <p><%=token.purchased_tokens%>un</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h2-show">
+                    <div class="h2-1-show">
+                      <div class="h2-2-show">
+                        <h2>Preço por token</h2>
+                      </div>
+                      <div class="h2-3-show">
+                        <p><%=number_to_currency(token.company.price_of_token,unit: "R$", separator: ",", delimiter: "")%></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h2-show">
+                    <div class="h2-1-show">
+                      <div class="h2-2-show">
+                        <h2>Total</h2>
+                      </div>
+                      <div class="h2-3-show">
+                        <p><%=number_to_currency(token.purchased_tokens * token.company.price_of_token,
+                          unit: "R$", separator: ",", delimiter: "")%></p>
+                      </div>
+                    </div>
+                  </div>
+                  <% unless token.price.nil? %>
+                    <div class="h2-show">
+                      <div class="h2-1-show">
+                        <div class="h2-2-show">
+                          <h2>Preço token venda</h2>
+                        </div>
+                        <div class="h2-3-show">
+                          <p><%=number_to_currency(token.price,unit: "R$", separator: ",", delimiter: "")%></p>
+                        </div>
+                      </div>
+                    </div>
+                    <%end%>
+                <%=link_to "Investir", company_path(token.company), class: "btn"%>
+                <%=link_to "Vender", edit_token_path(token), class: "btn btn-2"%>
+              </div>
+            </div>
           </div>
-        </div>
+        <%end%>
       </div>
-    <%end%>
   </div>
 </div>

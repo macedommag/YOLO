@@ -6,7 +6,7 @@
 .card-info-company {
   border-radius: 8px;
   //padding: 12px;
-  //box-shadow: 0 4px 6px 0 #404040bd;
+  box-shadow: 0 1px 9px 0 #404040bd;
   background-color: white;
   position: relative;
   margin-top: 0px;
@@ -45,6 +45,7 @@
     text-align: center;
     padding-bottom: 10px;
   }
+
 }
 
 .card-sell-token-mercado-secundario{
@@ -82,13 +83,14 @@
 
 .rating-card {
   width: 212px;
-  height: 140px;
+  height: 100px;
   margin: 10px;
   border-radius: 8px;
   background-color: white;
   padding: 14px;
   text-align: center;
   color: black;
+  box-shadow: 0 2px 10px 0 #33333333;
   h2{
     font-size: 14px;
     }
@@ -109,7 +111,7 @@ p {
   padding: 40px;
   text-align: center;
   border-radius: 20px;
-  //box-shadow: 0 4px 6px 0 #555353cc;
+  box-shadow: 0 5px 9px 0 #33333370;
 }
 .card-container{
   align-items: center;
@@ -136,7 +138,7 @@ p {
 
 .card-wallet {
   width: 100%;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .card-wallet-content {
@@ -144,10 +146,13 @@ p {
   border-radius: 12px;
   height: 100px;
   text-align: center;
-  background-color: white;
+  background-color: rgb(4, 4, 4);
+    opacity: 0.7;
+
   padding: 10px;
   box-shadow: 0 1px 7px 0 #555353cc;
 }
+
 
 .card-wallet-mark {
   position: absolute;
@@ -158,6 +163,7 @@ p {
   background-color:  #fdec01f3;
   border-radius: 2px;
 }
+
 
 .card-wallet-mark-1 {
   position: absolute;
@@ -173,7 +179,7 @@ p {
 .card-wallet-mark-2 {
   position: absolute;
   top: 94px;
-  left: 1030px;
+  left: 850px;
   width: 60px;
   height: 10px;
   background-color:  #fdec01f3;
@@ -199,6 +205,13 @@ p {
       line-height: 1.33;
       letter-spacing: 0.5px;
       color: #333333;
+      h6{
+        color: #fdec01f3;
+      }
+      h4{
+
+      }
+
 
     }
 
@@ -208,8 +221,28 @@ p {
       line-height: 1.33;
       letter-spacing: 0.5px;
       color: #627d98;
+      p{
+
+      }
     }
 }
+
+.h2-wallet {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+
+.h2-3-wallet {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.5px;
+  color: #627d98;
+}
+
 
 .img-show {
   object-fit: contain;
@@ -233,7 +266,7 @@ img {
     padding: 28px;
     background-color: #ffffff;
     border-radius: 4px;
-    box-shadow: 0 4px 6px 0 #33333333;
+    box-shadow: 0 2px 10px 0 #33333333;
 }
 
 .star-rating-titlle{
@@ -347,6 +380,7 @@ img {
   .agro {
     color: rgb(42, 133, 39);
   }
+
 
 }
 
