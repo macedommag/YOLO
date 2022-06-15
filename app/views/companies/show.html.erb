@@ -1,4 +1,5 @@
-<%=image_tag @company.image_url, class: "banner-company-info"%>
+
+<!--%=image_tag @company.image_url, class:"banner-company-info"%-->
 
 <div class="container">
   <div class="row justify-content-center">
@@ -7,8 +8,6 @@
         <div class="h1-show">
           <div>
             <h1><%= @company.name %></h1>
-          </div>
-          <div>
             <p><%= @company.address %></p>
           </div>
         </div>
@@ -66,7 +65,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-row" style="gap:5px;">
+        <div class="d-flex flex-row"style="gap:5px;">
           <p><%= link_to "Voltar", companies_path, class:"btn btn-sm" %></p>
           <p><%= link_to "Investir +", new_company_token_path(@company), class:"btn btn-sm" %></p>
         </div>
@@ -74,84 +73,57 @@
     </div>
     <div class="col-6 my-3">
       <div class="star-rating">
-        <div class="star-rating-title">
-          <h6>Raiting</h6>
-          <div class="star-rating-subtitle">
+        <div class="h2-2-show">
+          <h6>Ranking</h6>
+          <div class="h2-3-show">
             <% if @rating.persisted? %>
               <div>
-                <h3>Sua nota é</h3>
+                <p>Empresas mais votadas da Yolo.</p>
               </div>
-              <%= '⭐' * @rating.stars %>
+              <div class="rating-stars">
+                <%= "★" * @rating.stars %>
+              </div>
             <% else %>
               <%= simple_form_for [@company, @rating] do |f|%>
                 <%= f.input :stars, collection: (0..5) %>
-                <%= f.submit %>
+                <%= f.submit "escreva aqui", class: "btn btn-n" %>
               <% end %>
             <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end align-items-end">
+          <div class="d-flex justify-content-end align-items-end ">
+            <a href="https://www.reclameaqui.com.br/" target="_blank">
+              <div class="rating-card">
+                <div class="rating-card-content">
+                  <h2>Avaliação dos consumidores</h2>
+                  <%=image_tag "reclame_aqui.jpg", class: "rounded-circle", style: "width: 25px"%>
+                  <span>Reclame aqui</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex justify-content-end align-items-end">
+            <a href="https://www.glassdoor.com.br/" target="_blank">
+              <div class="rating-card">
+                <div class="rating-card-content">
+                  <h2>Avaliação dos consumidores</h2>
+                  <%=image_tag "glassdoor.jpg", class: "rounded-circle", style: "width: 22px"%>
+                  <span>Glassdoor<span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-    <!--div class="col-6 my-3">
-      <div class="star-rating">
-        <div class="star-rating-title">
-          <h6>Raiting</h6>
-          <div class="star-rating-subtitle">
-            <% if @rating.persisted? %>
-              <div>
-                <h3>Sua nota é</h3>
-              </div>
-              <%= '⭐' * @rating.stars %>
-            <% else %>
-              <%= simple_form_for [@company, @rating] do |f|%>
-                <%= f.input :stars, collection: (0..5) %>
-                <%= f.submit %>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div-->
-    <!--div c">
-      <div class="rating-card-group">
-        <a href="https://www.glassdoor.com.br/" target="_blank">
-          <div class="rating-card">
-            <div class="rating-card-content">
-              <p><strong>AVALIAÇÃO DOS FUNCIONÁRIOS</strong></p>
-              <%=image_tag "glassdoor.jpg", class: "rounded-circle", style: "width: 22px"%>
-              <span>Glassdoor<span>
-            </div>
-          </div>
-        </a>
-        <a href="https://www.reclameaqui.com.br/" target="_blank">
-          <div class="rating-card">
-            <div class="rating-card-content">
-              <p><strong>AVALIAÇÃO DOS CONSUMIDORES</strong></p>
-              <%=image_tag "reclame_aqui.jpg", class: "rounded-circle", style: "width: 25px"%>
-              <span>Reclame aqui</span>
-            </div>
-          </div>
-        </a-->
-        <!--div class="rating-card">
-            <div class="rating-card-content">
-              <p><strong>NOTA DA COMPANY</strong></p>
-              <% if @rating.persisted? %>
-                Sua nota é: <%= '⭐' * @rating.stars %>
-              <% else %>
-                <%= simple_form_for [@company, @rating] do |f|%>
-                  <%= f.input :stars, collection: (0..5) %>
-                  <%= f.submit %>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
-        </div-->
-  <div class="row justify-content-center align-items-center h-100">
-      <div style="width: 100%; height: 250px;", class="col-12 mt-4 map-container"
+      <div class="row justify-content-center align-items-center h-100">
+      <div style="width: 100%; height: 250px;", class="col-12 mt-4 map-container",
         data-controller="mapbox"
         data-mapbox-markers-value="<%= @markers.to_json %>"
         data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   </div>
+  </div>
+</div>
