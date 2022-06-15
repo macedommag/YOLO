@@ -150,6 +150,7 @@ p {
   box-shadow: 0 1px 7px 0 #555353cc;
 }
 
+
 .card-wallet-mark {
   position: absolute;
   top: -5px;
@@ -159,6 +160,7 @@ p {
   background-color:  #fdec01f3;
   border-radius: 2px;
 }
+
 
 .card-wallet-mark-1 {
   position: absolute;
@@ -349,4 +351,44 @@ img {
     color: rgb(42, 133, 39);
   }
 
+
 }
+}
+
+.card-about {
+
+  h4{
+    text-align: center;
+    font-size: 50px;
+    align-items: center;
+    margin: 0;
+  }
+
+  border-radius: 6px;
+
+  .card-text {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+
+  }
+
+  .rounded-circle{
+  align-items: center;
+  }
+
+  h6{
+    text-align: center;
+    font-size: 18px;
+    align-items: center;
+    margin: 0;
+  }
+
+  p{
+    font-size: 15px;
+    align-items: center;
+    margin: 0;
+  }
+
+}
+
