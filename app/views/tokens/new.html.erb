@@ -53,20 +53,41 @@
       <div class="col-6 my-3">
         <div class="star-rating">
           <div class="card-buy-token-mercado-secundario">
-          <h2>Mercado secundário</h2>
-          <% @company.tokens.each do |token|%>
-            <div class="card-buy-token-mercado-secundario-content">
-              <div class="content-1">
-                <% if token.price && token.user != current_user && token.purchased_tokens.positive? %>
-                  <p><strong>Quantidade:</strong> <%=token.purchased_tokens%> tokens</p>
-                  <p><strong>Preço por token:</strong> <%=number_to_currency(token.price, unit: "R$", separator: ",", delimiter: "")%></p>
-                    <div class="content-2">
-                      <%=link_to "Comprar", new_token_user_token_path(token), class: 'btn btn-flat'%>
+            <h2>Mercado secundário</h2>
+            <% @company.tokens.each do |token|%>
+              <div class="card-buy-token-mercado-secundario-content">
+                <div class="content-1">
+                  <% if token.price && token.user != current_user && token.purchased_tokens.positive? %>
+                  <div class="h2-show">
+                    <div class="h2-1-show">
+                      <div class="h2-2-show">
+                        <h2>Número de Tokens</h2>
+                      </div>
+                      <div class="h2-3-show">
+                        <p><%=token.purchased_tokens%></p>
+                      </div>
                     </div>
-                <% end %>
+                    <div class="h2-1-show">
+                      <div class="h2-2-show">
+                        <h2>Preço por token</h2>
+                      </div>
+                      <div class="h2-3-show" >
+                        <p><%=number_to_currency(token.price, unit: "R$", separator: ",", delimiter: "")%></p>
+                      </div>
+                    </div>
+                    <div class="h2-1-show">
+                      <div class="h2-2-show">
+                        <div class="content-2">
+                          <%=link_to "Comprar", new_token_user_token_path(token), class: 'btn btn-flat'%>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% end %>
+                </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
         </div>
       </div>
