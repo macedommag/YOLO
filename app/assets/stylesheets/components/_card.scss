@@ -6,7 +6,7 @@
 .card-info-company {
   border-radius: 8px;
   //padding: 12px;
-  //box-shadow: 0 4px 6px 0 #404040bd;
+  box-shadow: 0 1px 9px 0 #404040bd;
   background-color: white;
   position: relative;
   margin-top: 0px;
@@ -82,13 +82,14 @@
 
 .rating-card {
   width: 212px;
-  height: 140px;
+  height: 100px;
   margin: 10px;
   border-radius: 8px;
   background-color: white;
   padding: 14px;
   text-align: center;
   color: black;
+  box-shadow: 0 2px 10px 0 #33333333;
   h2{
     font-size: 14px;
     }
@@ -109,7 +110,7 @@ p {
   padding: 40px;
   text-align: center;
   border-radius: 20px;
-  //box-shadow: 0 4px 6px 0 #555353cc;
+  box-shadow: 0 5px 9px 0 #33333370;
 }
 .card-container{
   align-items: center;
@@ -136,7 +137,7 @@ p {
 
 .card-wallet {
   width: 100%;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .card-wallet-content {
@@ -235,7 +236,7 @@ img {
     padding: 28px;
     background-color: #ffffff;
     border-radius: 4px;
-    box-shadow: 0 4px 6px 0 #33333333;
+    box-shadow: 0 2px 10px 0 #33333333;
 }
 
 .star-rating-titlle{
@@ -390,4 +391,3 @@ img {
   }
 
 }
-
