@@ -45,6 +45,7 @@
     text-align: center;
     padding-bottom: 10px;
   }
+
 }
 
 .card-sell-token-mercado-secundario{
@@ -145,7 +146,9 @@ p {
   border-radius: 12px;
   height: 100px;
   text-align: center;
-  background-color: white;
+  background-color: rgb(4, 4, 4);
+    opacity: 0.7;
+
   padding: 10px;
   box-shadow: 0 1px 7px 0 #555353cc;
 }
@@ -176,7 +179,7 @@ p {
 .card-wallet-mark-2 {
   position: absolute;
   top: 94px;
-  left: 1030px;
+  left: 850px;
   width: 60px;
   height: 10px;
   background-color:  #fdec01f3;
@@ -202,6 +205,13 @@ p {
       line-height: 1.33;
       letter-spacing: 0.5px;
       color: #333333;
+      h6{
+        color: #fdec01f3;
+      }
+      h4{
+
+      }
+
 
     }
 
@@ -211,6 +221,9 @@ p {
       line-height: 1.33;
       letter-spacing: 0.5px;
       color: #627d98;
+      p{
+
+      }
     }
 }
 
