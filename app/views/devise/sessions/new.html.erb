@@ -2,7 +2,9 @@
 <div class="container h-100">
   <div class="row justify-content-center align-items-center h-100">
     <div class="col-4 form-yolo mt-5">
-      <h2>Bem-vindo à Yolo.</h2>
+      <h2>Bem-vindo à
+        <%= image_tag "yolofooter.png" %>
+      </h2>
 
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
