@@ -134,28 +134,41 @@ p {
 
 }
 
+.card-wallet {
+  width: 100%;
+  margin-top: 20px;
+}
 
 .card-wallet-content {
   position: relative;
   border-radius: 12px;
-  width: 300px;
   height: 100px;
   text-align: center;
   background-color: white;
   padding: 10px;
   box-shadow: 0 1px 7px 0 #555353cc;
 }
-  .card-wallet-mark {
-    position: absolute;
-    top: -5px;
-    left: 26px;
-    width: 60px;
-    height: 10px;
-    background-color:  #fdec01f3;
-    border-radius: 2px;
-  }
 
+.card-wallet-mark-1 {
+  position: absolute;
+  top: -5px;
+  left: 26px;
+  width: 60px;
+  height: 10px;
+  background-color:  #fdec01f3;
+  border-radius: 2px;
 }
+
+.card-wallet-mark-2 {
+  position: absolute;
+  top: 94px;
+  left: 1030px;
+  width: 60px;
+  height: 10px;
+  background-color:  #fdec01f3;
+  border-radius: 2px;
+}
+
 .h2-show{
     display: grid;
     grid-auto-flow: column;

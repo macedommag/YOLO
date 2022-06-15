@@ -7,6 +7,15 @@
   font-size: 12px;
 }
 
+.btn-wallet {
+  //background-color: #c5c4bb;
+	border: 0;
+  border-color: none;
+  border-radius: 12px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
 .btn-index {
 text-decoration: none;
 font-weight: bold;
@@ -33,4 +42,8 @@ font-weight: bold;
   border: 1px solid #ced4da;
   font-size: 14px;
   font-family: "Graphik";
+}
+
+.link-empresas-wallet {
+  color: black;
 }
