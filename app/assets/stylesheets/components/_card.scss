@@ -8,7 +8,7 @@
   //padding: 12px;
   //box-shadow: 0 4px 6px 0 #404040bd;
   background-color: white;
-  //position: relative;
+  position: relative;
   margin-top: 0px;
   padding: 24px;
   //display: grid;
@@ -81,16 +81,17 @@
 }
 
 .rating-card {
-  width: 250px;
-  height: 100px;
+  width: 212px;
+  height: 140px;
   margin: 10px;
   border-radius: 8px;
   background-color: white;
-  padding: 12px;
-  //box-shadow: 0 4px 6px 0 #555353cc;
+  padding: 14px;
   text-align: center;
   color: black;
-  position: relative;
+  h2{
+    font-size: 14px;
+    }
 
   &:hover {
     //box-shadow: 0 0px 8px 0 #fdec01f3;
@@ -143,7 +144,7 @@ p {
   background-color: white;
   padding: 10px;
   box-shadow: 0 1px 7px 0 #555353cc;
-
+}
   .card-wallet-mark {
     position: absolute;
     top: -5px;
@@ -247,6 +248,12 @@ img {
   }
 
 }
+.rating-stars{
+  font-size: 45px;
+  color: gold;
+
+
+}
 
 .card-body {
   box-shadow: 0 1px 8px 0 #555353cc;
@@ -316,4 +323,5 @@ img {
   .agro {
     color: rgb(42, 133, 39);
   }
+
 }
