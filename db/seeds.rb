@@ -49,7 +49,7 @@ company = Company.create!(sold_tokens: 0, name: 'Natura', address: 'Av Alexandre
 
 company = Company.create!(sold_tokens: 0, name: 'Grupo Mateus', address: 'Av. Daniel de la Touche, 73A - Cohama', equety: '337695', net_inc: '1949287', activity: 'Consumo não cíclico', description: 'Alimentos', max_tokens: '1000', price_of_token: '10', image_url: 'grupomateus.jpg')
 
-company = Company.create!(sold_tokens: 0, name: 'Coelce', address: 'R Padre Valdevino. 150 Fortaleza CE', equety: '265181', net_inc: '3230548', activity: 'Utilidade Pública', description: 'Energia Elétrica', max_tokens: '1000', price_of_token: '10', image_url: 'coelse.jpg')
+company = Company.create!(sold_tokens: 0, name: 'Coelce', address: 'R Padre Valdevino. 150 Fortaleza CE', equety: '265181', net_inc: '3230548', activity: 'Utilidade Pública', description: 'Energia Elétrica', max_tokens: '1000', price_of_token: '10', image_url: 'coelce.png')
 
 company = Company.create!(sold_tokens: 0, name: 'Eneva', address: 'Av Alexandre Colares. 1188 São Paulo SP', equety: '1006536', net_inc: '7930740', activity: 'Utilidade Pública', description: 'Energia Elétrica', max_tokens: '1000', price_of_token: '10', image_url: 'ENEVA1.png')
 
