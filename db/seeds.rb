@@ -38,7 +38,7 @@ puts "database is clean"
 # )
 # puts "Done!"
 
-company = Company.create!(sold_tokens: 0, name: 'Cadê o tio?', address: 'Av. Paulista. 1552 São Paulo SP', equety: '80313', net_inc: '1489120', activity: 'Tecnologia da Informação', description: 'Soluções voltadas para mobilidade urbana', max_tokens: '3000', price_of_token: '10', image_url: 'cadeotio.jpg')
+company = Company.create!(sold_tokens: 0, name: 'Cadê o tio?', address: 'Av. Paulista. 1552 São Paulo SP', equety: '80313', net_inc: '1489120', activity: 'Tecnologia da Informação', description: 'Soluções voltadas para mobilidade urbana', max_tokens: '1000', price_of_token: '10', image_url: 'cadeotio.jpg')
 
 company = Company.create!(sold_tokens: 0, name: 'Marco Polo', address: 'Av Marcopolo. 280 Caxias Do Sul - RS', equety: '190947', net_inc: '190950', activity: 'Bens Industriais', description: 'Material Rodoviario', max_tokens: '1000', price_of_token: '10', image_url: 'marcopolo.jpg')
 
