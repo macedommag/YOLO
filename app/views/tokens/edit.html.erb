@@ -1,14 +1,16 @@
-<div class="container">
-  <div class="row justify-content-center align-items-center h-100">
-    <div class="col-4 m-3">
-      <div class="card-sell-token-mercado-secundario">
-        <h1><%=@token.company.name%></h1>
-        <h2><%=@token.purchased_tokens%> tokens</h2>
-        <%= simple_form_for [@company, @token] do |f| %>
-          <%= f.input :price, label: "Preço por token" %>
-          <%= f.submit "Vender", class: 'btn btn-flat'%>
-        <% end %>
-     </div>
+<div  class="backgroud-index">
+  <div class="container">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-4 m-3">
+        <div class="card-sell-token-mercado-secundario">
+          <h1><%=@token.company.name%></h1>
+          <h2><%=@token.purchased_tokens%> tokens</h2>
+          <%= simple_form_for [@company, @token] do |f| %>
+            <%= f.input :price, label: "Preço por token" %>
+            <%= f.submit "Vender", class: 'btn btn-flat'%>
+          <% end %>
+      </div>
+      </div>
     </div>
   </div>
 </div>
