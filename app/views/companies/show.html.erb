@@ -86,7 +86,7 @@
               <% else %>
                 <%= simple_form_for [@company, @rating] do |f|%>
                   <%= f.input :stars, collection: (0..5) %>
-                  <%= f.submit "escreva aqui", class: "btn btn-n" %>
+                  <%= f.submit "Avalie a empresa", class: "btn btn-n" %>
                 <% end %>
               <% end %>
             </div>
