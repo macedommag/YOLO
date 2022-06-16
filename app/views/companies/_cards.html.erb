@@ -6,10 +6,18 @@
           <div>
           <%= image_tag company.image_url, class:"card-img-top img-responsive"%>
           </div>
-          <div class="mt-4">
-            <h5 class="card-title"><%= company.name %></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
-            <p class="card-text"><%=company.description%></p>
+          <div class="mt-4 col-12">
+              <div class="h2-show text-wrap d-flex">
+                <div class="h2-1-show">
+                  <div class="h2-2-show">
+                    <h5 class="card-title"><%= company.name %></h5>
+                  </div>
+                  <div class="h2-3-show">
+                    <h6 class="card-subtitle mb-2 text-muted"><%= company.activity %></h6>
+                  </div>
+                  <p class="card-text"><%=company.description%></p>
+                </div>
+              </div>
           </div>
         </div>
       <% end %>

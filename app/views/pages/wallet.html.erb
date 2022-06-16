@@ -1,7 +1,7 @@
 <div class="backgroud-index">
   <div class="container">
     <div class="card-wallet">
-      <div class="card-wallet-content">
+      <div class="card-wallet-content d-flex">
         <div class="card-wallet-mark-1"></div>
         <div class="card-wallet-mark-2"></div>
         <div class="row justify-content-center align-items-center">
@@ -17,13 +17,13 @@
               </div>
               <div class="col-3 pt-3">
                 <div class="h2-wallet">
-                  <h6>Número de Empresas</h6>
+                  <h6>Empresas</h6>
                 </div>
                 <div class="h2-3-wallet">
                   <% if @total_company == 1 %>
-                    <h6><%=@companies%> empresa</h6>
+                    <h6><%=@companies%></h6>
                     <% else %>
-                    <h6><%=@companies%> empresas</h6>
+                    <h6><%=@companies%></h6>
                   <%end%>
                 </div>
               </div>
