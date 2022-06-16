@@ -38,6 +38,7 @@ puts "database is clean"
 # )
 # puts "Done!"
 
+company = Company.create!(sold_tokens: 0, name: 'Cadê o tio?', address: 'Av. Paulista. 1552 São Paulo SP', equety: '80313', net_inc: '1489120', activity: 'Tecnologia da Informação', description: 'Soluções voltadas para mobilidade urbana', max_tokens: '3000', price_of_token: '10', image_url: 'logo_cadeotio.png')
 
 company = Company.create!(sold_tokens: 0, name: 'Marco Polo', address: 'Av Marcopolo. 280 Caxias Do Sul - RS', equety: '190947', net_inc: '190950', activity: 'Bens Industriais', description: 'Material Rodoviario', max_tokens: '1000', price_of_token: '10', image_url: 'marcopolo.jpg')
 
@@ -62,5 +63,6 @@ company = Company.create!(sold_tokens: 0, name: 'Lelis Blanc', address: 'R Padre
 company = Company.create!(sold_tokens: 0, name: 'Suzano Papel', address: 'Av. Daniel de la Touche, 73A - Cohama', equety: '318460', net_inc: '12025935', activity: 'Madeira e Papel', description: 'Papel e Celulose', max_tokens: '1000', price_of_token: '10', image_url: 'SUZANO.jpg')
 
 company = Company.create!(sold_tokens: 0, name: 'Totvs', address: 'R Padre Valdevino. 150 Fortaleza CE', equety: '60643', net_inc: '1288220', activity: 'Tecnologia da Informação', description: 'Programas e Serviços', max_tokens: '1000', price_of_token: '10', image_url: 'TOTVS.jpg')
+
 
 p "created #{Company.count} companies"
