@@ -317,6 +317,7 @@ img {
   height: 60vh;
 
 
+
   .card-text {
     text-decoration: none;
     color: black;
@@ -326,6 +327,15 @@ img {
     color: black
   }
 }
+
+.card-body-home{
+  box-shadow: 0 1px 8px 0 #555353cc;
+  border-radius: 6px;
+  height: 20vh;
+  text-align: center;
+  padding: 12px;
+}
+
 
 .card-body {
   &:hover {
@@ -421,3 +431,4 @@ img {
   }
 
 }
+

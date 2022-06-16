@@ -20,14 +20,14 @@ class CompaniesController < ApplicationController
     @markers = [{lat: @company.latitude, lng: @company.longitude,
                  info_window: render_to_string(partial: "info_window",
                  locals: { company: @company }),
-                 image_url: helpers.asset_url("gps.jpg")
+                 image_url: helpers.asset_url("pointer2yolo@1,25x.png")
                 }
                ]
     @rating = Rating.find_by(company: @company, user: current_user)
     @rating = Rating.new unless @rating
-      
+
   end
-  
+
   private
 
   def set_company
