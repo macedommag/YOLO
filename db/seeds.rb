@@ -46,7 +46,7 @@ company = Company.create!(sold_tokens: 0, name: 'Wilson Sons', address: 'Av Alex
 
 company = Company.create!(sold_tokens: 0, name: 'San Martinho', address: 'Av Marcopolo. 280 Caxias Do Sul - RS', equety: '491706', net_inc: '3289775', activity: 'Consumo não cíclico', description: 'Açucar e Alcool', max_tokens: '1000', price_of_token: '10', image_url: 'saomartinho.png')
 
-company = Company.create!(sold_tokens: 0, name: 'Natura', address: 'Av Alexandre Colares. 1188 São Paulo SP', equety: '548379', net_inc: '2574102', activity: 'Consumo não cíclico', description: 'Produtos de uso pessoal', max_tokens: '1000', price_of_token: '10', image_url: 'natura.jpeg')
+company = Company.create!(sold_tokens: 0, name: 'Natura', address: 'Av Alexandre Colares. 1188 São Paulo SP', equety: '548379', net_inc: '2574102', activity: 'Consumo não cíclico', description: 'Produtos de uso pessoal', max_tokens: '1000', price_of_token: '10', image_url: 'natura.jpg')
 
 company = Company.create!(sold_tokens: 0, name: 'Grupo Mateus', address: 'Av. Daniel de la Touche, 73A - Cohama', equety: '337695', net_inc: '1949287', activity: 'Consumo não cíclico', description: 'Alimentos', max_tokens: '1000', price_of_token: '10', image_url: 'grupomateus.jpg')
 
